@@ -14,6 +14,11 @@ import { restart } from './plugins/restart';
 import { restartEnvFileChange } from './plugins/restartEnvFileChange';
 
 export default defineConfig({
+ build: {
+   outDir:"dist", //IMPORTANT:
+   Must be dist for Vercel
+ },
+});
   // Keep them available via import.meta.env.NEXT_PUBLIC_*
   envPrefix: 'NEXT_PUBLIC_',
   optimizeDeps: {
